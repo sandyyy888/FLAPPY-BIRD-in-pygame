@@ -1,0 +1,17 @@
+import pygame
+import sys
+
+pygame.init()
+scr_width,scr_height = 400 , 800
+screen = pygame.display.set_mode((scr_width,scr_height))
+clock = pygame.time.Clock()
+fps = 60
+
+
+for event in pygame.event.get():
+    if event.type == pygame.QUIT:
+        pygame.quit()
+        sys.exit()
+
+    pygame.display.update()
+    clock.tick(fps)
